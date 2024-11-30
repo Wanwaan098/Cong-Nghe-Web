@@ -1,17 +1,6 @@
 <?php
 // Kết nối đến cơ sở dữ liệu
-$servername = "localhost";
-$username = "root";
-$password = ""; // Mật khẩu cho MySQL
-$database = "ProductDB";
-
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Kiểm tra kết nối
-if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
-}
-
+include 'products.php'; 
 // Thêm sản phẩm vào cơ sở dữ liệu
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'] ?? '';
